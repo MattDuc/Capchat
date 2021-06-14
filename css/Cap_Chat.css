@@ -1,0 +1,102 @@
+.Form{
+	margin-top: 200px;
+	border:1px solid #d3d3d3;
+	border-radius: 10px;
+	width: 532px;
+	margin-left: 500px;
+	background-color: #F9F8F6;
+	}
+
+canvas{
+	border:1px solid #d3d3d3;
+	border-radius: 10px; 
+	margin-left: 25px;
+	margin-top: 10px;
+	width: 100px;
+	height: 100px;
+	background-color: #FFFFFF;
+}
+
+div.Bloc{
+	margin-left: 30px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.reponse{
+	width: 100px;
+	height: 29px;
+	display: inline-block;
+  	font-weight: 400;
+ 	user-select: none;
+  	background-color: transparent;
+  	border: 1px solid transparent;
+  	font-size: 1rem;
+  	line-height: 1.5;
+  	border-radius: 0.25rem;
+}
+
+
+.btn{
+	margin-left: 5px;
+	width: 100px;
+	height: 29px;
+	display: inline-block;
+  	font-weight: 400;
+  	text-align: center;
+  	-webkit-user-select: none;
+  	-moz-user-select: none;
+  	-ms-user-select: none;
+ 	user-select: none;
+  	background-color: transparent;
+  	border: 1px solid transparent;
+  	font-size: 1rem;
+  	line-height: 1.5;
+  	border-radius: 0.25rem;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn1{
+	color: #fff;
+  	background-color: #000091;
+  	border-color: #000091;
+}
+
+.btn1:hover{
+	color: #fff;
+  	background-color: #0000B7;
+  	border-color: #0000B7;
+}
+
+.btn2{
+	color: #fff;
+  	background-color: #dc3545;
+  	border-color: #dc3545;
+}
+
+.btn2:hover{
+	color: #fff;
+  	background-color: #c82333;
+  	border-color: #c82333;
+}
+
+legend{
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: #ffffff;
+	border:1px solid #d3d3d3;
+	border-radius: 5px; 
+}
+
+.consigne{
+	font-size: 0.9em;
+	margin-left: 30px;
+	margin-bottom: 20px; 
+	text-decoration: underline;
+}
+
+#rebours{
+	margin-left: 12px;
+	width: 17px;
+	text-align: center;
+}

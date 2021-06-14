@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CAP' CHAT</title>
+	<link rel="stylesheet" href="css/Cap_Chat.css">
+	<link rel="stylesheet" href="css/bootsrap.css">
+</head>
+
+<body onload="Captcha();">
+	<fieldset class="Form">
+  	<legend>CAP'CHAT</legend>
+  		<table>
+  			<canvas type="image"  id="chat1">	
+			</canvas>
+			<canvas type="image"  id="chat2">	
+			</canvas>
+			<canvas type="image"  id="chat3">	
+			</canvas>
+			<canvas type="image"  id="chat4">	
+			</canvas>
+			<canvas type="image"  id="chat5">	
+			</canvas>
+			<canvas type="image"  id="chat6">	
+			</canvas>
+			<canvas type="image"  id="chat7">	
+			</canvas>
+			<canvas type="image"  id="chat8">	
+			</canvas>
+  		</table>
+  		<canvas class="reponse" type="text"  id="reponse"></canvas>
+		</br></br>
+		<div class="consigne">
+			Parmi les huit images affichées, clickez sur la seule image singulière
+		</div>
+		<div class="Bloc">  
+   			<button class="btn btn1" id="btn_indice" type="button" onclick="Indice();">Indice</button>
+   			<button class="btn btn2" type="button" id="btn_refresh" onclick="Captcha();">Nouveau</button>
+   		</div>
+   		</br></br>
+		<input name="rebours" type="text" id="rebours" size="3">  secondes avant actualisation automatique du captcha
+	</fieldset>
+	<script src="js/Cap_Chat.js"></script>
+</body>
+</html>
