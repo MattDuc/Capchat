@@ -25,11 +25,14 @@ var indice;
 var bon_canvas;
 var bon_click;
 var faux = 0;
+var tentatives = 0;
+var bloc = 0;
 
 function Captcha(){
 	t = 0;
 	clearTimeout(timeCap);
 	clearTimeout(timeChr);
+	ctx.clearRect(0, 0, reponse.width, reponse.height);
 	var tab_neutres = new Array('img/neutres/chat_neutre1.jpg', 'img/neutres/chat_neutre2.jpg', 'img/neutres/chat_neutre3.jpg', 'img/neutres/chat_neutre4.jpg', 
 	'img/neutres/chat_neutre5.jpg', 'img/neutres/chat_neutre6.jpg', 'img/neutres/chat_neutre7.jpg', 'img/neutres/chat_neutre8.jpg', 'img/neutres/chat_neutre9.jpg',
 	'img/neutres/chat_neutre10.jpg', 'img/neutres/chat_neutre11.jpg', 'img/neutres/chat_neutre12.jpg', 'img/neutres/chat_neutre13.jpg');
@@ -218,15 +221,15 @@ function Captcha(){
 		btn_refresh.style.cursor = "pointer";
 	});
 
-	timeCap = setTimeout(Captcha,20000);
+	timeCap = setTimeout(Captcha,30000);
 	Chrono();
 
 }
 
 function Chrono(){
 	t++;
-	document.getElementById("rebours").value = 21-t;
-	if(t==20){
+	document.getElementById("rebours").value = 31-t;
+	if(t==30){
 		t = 0;
 	}else{
 		timeChr = setTimeout('Chrono()',1000);
@@ -242,12 +245,24 @@ function Valider(){
 	ctx.font = '100px bold times';
 	var faux = "Faux";
 	var vrai = "Vrai";
+	var echec = "Echec"
+	tentatives = tentatives + 1;
 	if (bon_canvas == bon_click){
 		ctx.fillStyle = "#33D028";
-		ctx.fillText(vrai, 20, 80);
+		ctx.fillText(vrai, 20, 90);
+		setTimeout(function(){location.href="http://localhost:8080"} , 1000);
 	}else{
-		ctx.fillStyle = "#D02828";
-		ctx.fillText(faux, 10, 80);
-		setTimeout("location.reload(true);",1000);
+		if (tentatives == 4){
+			bloc = 1;
+			ctx.fillStyle = "#D02828";
+			ctx.fillText(echec, 20, 90);
+			setTimeout(function(){location.href="https://www.google.fr/"} , 1000);
+		}else if (bloc == 0){
+			ctx.fillStyle = "#D02828";
+			ctx.fillText(faux, 20, 90);
+			setTimeout('Captcha()' , 1000);
+		}
 	}
+
+	
 }
